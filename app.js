@@ -1,23 +1,33 @@
-let resume = {
-  Name: "Alex Loper".toUpperCase(),
-  Career: "Warehouse Manager",
-  description: "I run one fo the Armstrong Relocation warehouses in downtown Birmingham.",
-  intrests: ["I like to play video games", "I enjoy playing soccer", "I like watching football on the weekends"],
-  pastPositions: [
-    companyName,
-    "Felinis Pizza",
-    jobTitle,
-    "chef",
-    description,
-    "I would make pizza for custmers",
-    // "deliveries department at Home Depot, I would get everything ready to be deleivred to customers",
-    // "debt collector at Zealandia capital, I would cold call people who owed money agaisnt their timeshares that they owned",
-  ],
-  skills: ["BAM: Grand Champion Rocket League palyer", "I can touch my tounge to my nose", "spanish", "BAM: built my own PC", "film buff", "BAM: scratch golfer"],
-};
+console.log("Name:" + " Alex Loper".toUpperCase());
+console.log("Career: Warehouse Manager");
+console.log("Description: I run one of the Armstrong Relocation warehouses in downtown Birmingham.");
+console.log("Intrests:");
+console.log("- I like to play video games");
+console.log("- Anime");
+console.log("- football");
 
-function displayPosition(pastPositions) {
-  return companyName, jobTitle, description;
+console.log("My Previous Expereince:");
+
+function displayPosition(company, title, description) {
+  console.log("- " + description + " for " + company + " as a " + title);
 }
 
-console.log(resume);
+displayPosition("felinis pizza", "chef", "cooked pizza for customers");
+displayPosition("Home Depot", "deliveries employee", "got everything ready to be delivered");
+displayPosition("Zealandia Capital", "debt collector", "called people who owed money on their timeshares");
+
+console.log("My Skills:");
+displaySkill("- Grand Champion Rocket League player", true);
+displaySkill("- I can touch my tounge to my nose", false);
+displaySkill("- Spanish", false);
+displaySkill("- Built my own PC", true);
+displaySkill("- film buff", false);
+displaySkill("- scratch golfer", true);
+
+function displaySkill(name, isCool) {
+  if (isCool) {
+    console.log("BAM!: " + name);
+  } else {
+    console.log(name);
+  }
+}
